@@ -1,0 +1,24 @@
+<div>
+    <h2>
+        the greeting message: {{greeting}}
+        <button (click)="btnClicked($event)">Click me</button>
+        &nbsp;
+        <button (click)="toggleTable()">Toggle table</button>
+        <div *ngIf="flag">
+            <h4>list of vegetables</h4>
+
+            <table border="bold">
+                <tr>
+                        <th>Name</th> 
+                        <th>Price</th>
+                </tr>
+                <tr *ngFor ="let i of vegetables">
+                     <td>{{i.name}}</td>
+                     <td> {{i.price}}</td>
+                </tr>
+            </table>
+           
+        </div>
+    </h2>
+    
+</div>
